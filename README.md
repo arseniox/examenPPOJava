@@ -1,4 +1,4 @@
-# examenPPOJava
+# Examen Java - Programación Orientada a Objetos
 
 ## CuentaBancaria
 
