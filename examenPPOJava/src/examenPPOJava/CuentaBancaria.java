@@ -33,15 +33,15 @@ public abstract class CuentaBancaria {
 	}
 	
 	// MÉTODOS
-	public void ingresar(int qty) {
+	public void ingresar(float qty) {
 		this.saldo = this.saldo + qty;
 	}
 	
-	public void retirar(int qty) {
+	public void retirar(float qty) {
 		this.saldo = this.saldo - qty;
 	}
 	
-	public void añadir(int qty) {
+	public void añadir(float qty) {
 		this.saldo = this.saldo + qty;
 	}
 	
