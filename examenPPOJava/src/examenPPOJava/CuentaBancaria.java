@@ -53,4 +53,32 @@ public abstract class CuentaBancaria {
 	public abstract void calcularIntereses();
 	
 	public abstract void mostrarCuenta();
+	
+	
+	
+	public static void main(String[] args) {
+		
+		CuentaCorriente cuenta1 = new CuentaCorriente ("ES6256465847", 1000.0f, 0.5f);
+		CuentaAhorro cuenta2 = new CuentaAhorro ("ES9956415656", 3010.0f, 0.10f, 4000.0f);
+		
+		System.out.println("--- Mostramos datos de las cuentas ---");
+		cuenta1.mostrarCuenta();
+		cuenta2.mostrarCuenta();
+		
+		System.out.println("--- Ingresamos, retiramos y mostramos ---");
+
+		cuenta1.ingresar(600);
+		cuenta2.retirar(200);
+		traspaso(cuenta1, cuenta2, 800);
+		cuenta1.mostrarCuenta();
+		cuenta2.mostrarCuenta();
+
+		System.out.println("--- Aplicamos intereses ---");
+
+		cuenta1.calcularIntereses();
+		cuenta2.calcularIntereses();
+		cuenta1.mostrarCuenta();
+		cuenta2.mostrarCuenta();
+	}
+	
 }
